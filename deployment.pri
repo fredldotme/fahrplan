@@ -126,6 +126,7 @@ symbian {
         MANIFEST = $$replace(MANIFEST,@APP_ID@,$${APP_ID})
         MANIFEST = $$replace(MANIFEST,@APP_NAME@,$${APP_NAME})
         MANIFEST = $$replace(MANIFEST,@MAINTAINER_UBUNTU@,$${MAINTAINER_UBUNTU})
+        MANIFEST = $$replace(MANIFEST,@CLICK_ARCH@,$${CLICK_ARCH})
         # The following line is required for the Ubuntu SDK to generate a run config
         UBUNTU_MANIFEST_FILE = $${OBJECTS_DIR}/manifest.json
         write_file($${UBUNTU_MANIFEST_FILE},MANIFEST)

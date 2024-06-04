@@ -6,7 +6,7 @@ VERSION = 2.0.46-1
 
 #CONFIG+= openrepos
 
-DEFINES += BUILD_FOR_SAILFISHOS
+#DEFINES += BUILD_FOR_SAILFISHOS
 
 # Switch for jolla to separate harbour and openrepo version
 openrepos {
@@ -25,8 +25,9 @@ symbian {
     DEFINES += FAHRPLAN_SETTINGS_NAMESPACE=\"smurfy\"
 }
 ubuntu {
-    APP_ID = openstore.fahrplan2
-    MAINTAINER_UBUNTU = Michael Stevens <mail@michael-stevens.de>
+    CLICK_ARCH=$$system(dpkg-architecture -qDEB_HOST_ARCH)
+    APP_ID = fahrplan2.fredldotme
+    MAINTAINER_UBUNTU = Alfred Neumayer <dev.beidl@gmail.com>
     DEFINES += FAHRPLAN_VERSION=\\\"$$VERSION\\\"
     DEFINES += FAHRPLAN_SETTINGS_NAMESPACE=\\\"$$APP_ID\\\"
 }
